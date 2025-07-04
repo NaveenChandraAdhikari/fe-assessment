@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Root Variables for Colors and Fonts */
+:root {
+    --color-primary-blue: #4C5FD5;
+    --color-text-dark: #191919;
+    --color-text-medium: #616467;
+    --color-text-light: #A3A6A8;
+    --color-bg-light: #DADBF1;
+    --color-bg-white: #FFFFFF;
+    --color-border-light: #E8E8E8;
+    --color-card-bg: #E6F0FA;
+    --color-card-border: #B3C9E6;
+
+    --font-family-body: 'Inter', sans-serif;
+    --font-family-heading: 'Outfit', sans-serif; /* Or 'Inter' for more uniformity */
+}
+
+
+
+body {
+    font-family: var(--font-family-body);
+    font-size: 16px; /* Base font size */
+    line-height: 1.5;
+    background-color: var(--color-bg-white);
+    color: var(--color-text-dark);
+    /* overflow-x: hidden; Prevent horizontal scroll */
+}
+
+/* General Container for Centering */
+.container-inner {
+    max-width: 1200px; /* Standard max width */
+    margin: 0 auto;
+    padding: 0 20px; /* Padding for smaller screens */
+}

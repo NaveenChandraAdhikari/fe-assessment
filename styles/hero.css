@@ -1,0 +1,59 @@
+
+.hero {
+    background: var(--color-bg-light); 
+    padding: 80px 20px 100px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-family: var(--font-family-heading); 
+    font-size: clamp(2.5rem, 6vw, 4.5rem); /* Responsive font size (40px to 72px) */
+    font-weight: 600; /* Medium-bold */
+    color: var(--color-text-dark);
+    margin-bottom: 40px;
+    line-height: 1.1;
+}
+/* we dont need responsiveness for that if we have clamp */
+/* clamp(min, preferred, max) */
+/* 2.5rem: The minimum font size (40px, assuming 1rem = 16px). */
+/* 6vw: The preferred font size, which scales based on the viewport width (6% of the viewport width). */
+/* 4.5rem: The maximum font size (72px, assuming 1rem = 16px). */
+.hero-search-container {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow */
+    border: 1px solid var(--color-border-light); /* Subtle border for search bar */
+}
+
+.hero-search-input {
+    flex: 1;
+    padding: 18px 24px;
+    border: none;
+    font-size: 17px;
+    background: var(--color-bg-white);
+    color: var(--color-text-dark);
+    outline: none;
+}
+
+.hero-search-input::placeholder {
+    color: var(--color-text-medium); 
+    opacity: 0.7;
+}
+
+.hero-search-btn {
+    padding: 18px 24px;
+    background: var(--color-bg-white);
+    border: none;
+    font-size: 20px;
+    color: var(--color-text-medium); 
+    border-left: 1px solid var(--color-border-light); 
+        cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.hero-search-btn:hover {
+    background: #F8F9FA;
+}

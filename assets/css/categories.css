@@ -9,8 +9,8 @@
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Responsive grid */
-    gap: 30px; /* Space between cards */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+    gap: 30px; 
 }
 
 .category-card {
@@ -19,9 +19,9 @@
     border-radius: 8px;
     /* border: 1px solid var(--color-card-border); Matching border color */
     display: block; /* Make the whole card a clickable link */
-    text-decoration: none; /* Remove underline from link */
-    color: inherit; /* Inherit text color */
-    transition: all 0.2s ease;
+    text-decoration: none; 
+    color: inherit; 
+        transition: all 0.2s ease;
 }
 
 .category-card:hover {

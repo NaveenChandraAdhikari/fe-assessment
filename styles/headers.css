@@ -141,3 +141,18 @@
     border-radius: 2px;
     transition: all 0.3s ease;
 }
+
+ .search-icon{
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    width: 32px;
+    height: 24px;
+}
+.search-icon .search-image{
+    width: 20px;
+    height: 20px;
+   filter: invert(100%);
+}

@@ -22,6 +22,15 @@
 
 /* Mobile (Less than 768px) */
 @media (max-width: 768px) {
+    .search-icon {
+
+       
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
   .header {
       padding: 15px 0; 
   }

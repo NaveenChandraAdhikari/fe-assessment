@@ -57,3 +57,76 @@
 .hero-search-btn:hover {
     background: #F8F9FA;
 }
+
+
+
+/*  */
+
+
+.dictionary, .word-detail {
+    padding: 80px 20px;
+    background: var(--color-bg-white);
+}
+
+.dictionary-container, .word-detail-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.word-detail-container {
+    grid-template-columns: 1fr;
+}
+
+.word-card {
+    padding: 30px;
+    border-radius: 8px;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.word-card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transform: translateY(-5px);
+}
+
+.word-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.word-title {
+    font-family: var(--font-family-heading);
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-text-dark);
+}
+
+.word-phonetic {
+    font-size: 15px;
+    color: var(--color-text-medium);
+}
+
+.word-description {
+    font-size: 15px;
+    color: var(--color-text-medium);
+    margin-bottom: 15px;
+}
+
+.word-link {
+    font-size: 15px;
+    color: var(--color-primary-blue);
+    font-weight: 500;
+    text-decoration: none;
+    transition: text-decoration 0.2s ease;
+}
+
+.word-link:hover {
+    text-decoration: underline;
+}

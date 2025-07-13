@@ -20,8 +20,8 @@
     /* border: 1px solid var(--color-card-border); Matching border color */
     display: block; /* Make the whole card a clickable link */
     text-decoration: none; 
-    color: inherit; 
-        transition: all 0.2s ease;
+    color: inherit;
+    transition: all 0.2s ease;
 }
 
 .category-card:hover {
@@ -68,7 +68,7 @@
     font-size: 15px;
     color: var(--color-text-medium); 
     margin-bottom: 15px; 
-}
+} 
 
 .category-link {
     font-size: 15px;

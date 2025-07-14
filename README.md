@@ -11,5 +11,5 @@
 
   Integrated Word system :
 <img width="1840" height="1014" alt="Screenshot from 2025-07-14 11-33-45" src="https://github.com/user-attachments/assets/891c76d5-b5c1-45a5-992c-636eb57b38c1" />
+![Uploading Screenshot from 2025-07-14 16-43-37.png…]()
 
-  <img width="1840" height="1014" alt="image" src="https://github.com/user-attachments/assets/6ebaa33d-da35-4e6c-8d40-0bca48ec9a8b" />

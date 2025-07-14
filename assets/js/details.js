@@ -1,7 +1,5 @@
 const wordTitle = document.getElementById('word-title');
 const wordPhonetic = document.getElementById('word-phonetic');
-// const wordDefinition = document.getElementById('word-definition').querySelector('span');
-// const wordExample = document.getElementById('word-example').querySelector('span');
 const definitionsList=document.getElementById('definitions-list');
 const errorMessage = document.getElementById('error-message');
 

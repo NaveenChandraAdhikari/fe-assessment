@@ -13,6 +13,7 @@ async function fetchWordDetails(word) {
         const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(word)}`);
         if (!response.ok) throw new Error('Word not found');
         const data = await response.json();
+        // console.log(data[0]);
         return data[0];
     } catch (error) {
         console.error('Error fetching word details:', error);
@@ -22,19 +23,6 @@ async function fetchWordDetails(word) {
 
 function findNounDetails(meanings){
     return meanings.find(meaning=>meaning.partOfSpeech==='noun')
-}
-
-
-function findNounDefinition(meanings) {
-    const nounMeaning = meanings.find(meaning => meaning.partOfSpeech === 'noun');
-    if (nounMeaning && nounMeaning.definitions.length > 0) {
-        const definition = nounMeaning.definitions[0];
-        return {
-            definition: definition.definition || 'No definition available',
-            example: definition.example || 'No example available'
-        };
-    }
-    return { definition: 'No noun definition available', example: 'No example available' };
 }
 
 

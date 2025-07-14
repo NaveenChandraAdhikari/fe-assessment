@@ -93,29 +93,4 @@ async function displayWordDetails() {
         definitionsList.textContent = 'No noun definitions found for this word.';
     }
 }
-
-
-// async function displayWordDetails() {
-//     let word = getWordFromUrl() || localStorage.getItem('selectedWord');
-//     if (!word) {
-//         errorMessage.textContent = 'No word selected.';
-//         errorMessage.style.display = 'block';
-//         return;
-//     }
-//     localStorage.setItem('selectedWord', word);
-
-//     const wordData = await fetchWordDetails(word);
-//     if (!wordData) {
-//         errorMessage.textContent = 'Failed to load word details.';
-//         errorMessage.style.display = 'block';
-//         return;
-//     }
-
-//     wordTitle.textContent = word;
-//     wordPhonetic.textContent = wordData.phonetic || 'N/A';
-//     const { definition, example } = findNounDefinition(wordData.meanings);
-//     wordDefinition.textContent = definition;
-//     wordExample.textContent = example;
-// }
-
 displayWordDetails();

@@ -1,158 +1,157 @@
-
 .header {
-    background: var(--color-text-dark); 
-    color: var(--color-bg-white);
-    padding: 20px 0; /* Vertical padding */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
+  background: var(--color-text-dark);
+  color: var(--color-bg-white);
+  padding: 20px 0; /* Vertical padding */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1400px; /* Wider for header */
-    margin: 0 auto;
-    padding: 0 40px; /* More padding on desktop */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px; /* Wider for header */
+  margin: 0 auto;
+  padding: 0 40px; /* More padding on desktop */
 }
 
 .header-left {
-    display: flex;
-    align-items: center;
-    gap: 8px; 
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 24px; 
-    font-weight: 600;
-    text-decoration: none;
-    color: inherit; 
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 24px;
+  font-weight: 600;
+  text-decoration: none;
+  color: inherit;
 }
 
 .abstract-logo-header {
-    width: 32px; 
-    height: 32px;
+  width: 32px;
+  height: 32px;
 }
 
 .logo-divider {
-    color: rgba(255, 255, 255, 0.4); 
-    font-size: 24px; /* Matches logo text size */
-    font-weight: 300; /* Lighter weight */
-    margin: 0 4px;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 24px; /* Matches logo text size */
+  font-weight: 300; /* Lighter weight */
+  margin: 0 4px;
 }
 
 .help-center {
-    color: var(--color-bg-white);
-    text-decoration: none;
-    font-weight: 400;
-    font-size: 16px;
-    opacity: 0.8;
-    transition: opacity 0.2s ease;
+  color: var(--color-bg-white);
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 16px;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
 }
 
 .help-center:hover {
-    opacity: 1;
-    text-decoration: underline;
+  opacity: 1;
+  text-decoration: underline;
 }
 
 .header-actions {
-    display: flex;
-    align-items: center;
-    gap: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
 .search-desktop {
-    display: block; 
+  display: block;
 }
 
 .search-input {
-    padding: 10px 16px; 
-    border: 1px solid rgba(255, 255, 255, 0.2); 
-    border-radius: 8px;
-    width: 300px; /* Standard width */
-    font-size: 15px;
-    background: rgba(255, 255, 255, 0.1);
-    color: var(--color-bg-white);
-    outline: none;
-    transition: all 0.2s ease;
+  padding: 10px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  width: 300px; /* Standard width */
+  font-size: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--color-bg-white);
+  outline: none;
+  transition: all 0.2s ease;
 }
 
 .search-input::placeholder {
-    color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .search-input:focus {
-    background: rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
 .submit-request-btn,
 .sign-in-btn {
-    padding: 10px 20px; 
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 15px;
-    font-weight: 500;
-    white-space: nowrap;
-    transition: background-color 0.2s ease, border-color 0.2s ease;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
 .submit-request-btn {
-    background: transparent;
-    color: var(--color-bg-white);
-    border: 1px solid var(--color-text-medium); 
+  background: transparent;
+  color: var(--color-bg-white);
+  border: 1px solid var(--color-text-medium);
 }
 
 .submit-request-btn:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
 .sign-in-btn {
-    background: var(--color-primary-blue);
-    color: var(--color-bg-white);
-    border: none;
+  background: var(--color-primary-blue);
+  color: var(--color-bg-white);
+  border: none;
 }
 
 .sign-in-btn:hover {
-    background: #3A4BB5; 
+  background: #3a4bb5;
 }
 
 /* Hamburger Menu (Mobile) */
 .menu-toggle-btn {
-    display: none; /* Hidden by default */
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 8px;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 24px;
+  display: none; /* Hidden by default */
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 24px;
 }
 
 .menu-toggle-btn .bar {
-    display: block;
-    width: 100%;
-    height: 3px;
-    background: var(--color-bg-white);
-    border-radius: 2px;
-    transition: all 0.3s ease;
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: var(--color-bg-white);
+  border-radius: 2px;
+  transition: all 0.3s ease;
 }
 
- .search-icon{
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 8px;
-    width: 32px;
-    height: 24px;
+.search-icon {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  width: 32px;
+  height: 24px;
 }
-.search-icon .search-image{
-    width: 20px;
-    height: 20px;
-   filter: invert(100%);
+.search-icon .search-image {
+  width: 20px;
+  height: 20px;
+  filter: invert(100%);
 }

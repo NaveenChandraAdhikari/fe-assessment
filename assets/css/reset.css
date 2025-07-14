@@ -1,49 +1,47 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Root Variables for Colors and Fonts */
 :root {
-    --color-primary-blue: #4C5FD5;
-    --color-text-dark: #191919;
-    --color-text-medium: #616467;
-    --color-text-light: #A3A6A8;
-    --color-bg-light: #DADBF1;
-    --color-bg-white: #FFFFFF;
-    --color-border-light: #E8E8E8;
-    --color-card-bg: #E6F0FA;
-    --color-card-border: #B3C9E6;
-
-    --font-family-body: 'Inter', sans-serif;
-    --font-family-heading: 'Outfit', sans-serif; /* Or 'Inter' for more uniformity */
+  --color-primary-blue: #4c5fd5;
+  --color-text-dark: #191919;
+  --color-text-medium: #616467;
+  --color-text-light: #a3a6a8;
+  --color-bg-light: #dadbf1;
+  --color-bg-white: #ffffff;
+  --color-border-light: #e8e8e8;
+  --color-card-bg: #e6f0fa;
+  --color-card-border: #b3c9e6;
+  --font-family-body: "Inter", sans-serif;
+  --font-family-heading: "Outfit", sans-serif; /* Or 'Inter' for more uniformity */
 }
-
 
 html {
   height: 100%;
 }
 
 .main-content {
-  flex-grow: 1; 
+  flex-grow: 1;
 }
 
 body {
-    min-height: 100%; 
-    display: flex; 
-    flex-direction: column; 
-    font-family: var(--font-family-body);
-    font-size: 16px; /* Base font size */
-    line-height: 1.5;
-    background-color: var(--color-bg-white);
-    color: var(--color-text-dark);
-    overflow-x: hidden; /*Prevent horizontal scroll*/
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family-body);
+  font-size: 16px; /* Base font size */
+  line-height: 1.5;
+  background-color: var(--color-bg-white);
+  color: var(--color-text-dark);
+  overflow-x: hidden; /*Prevent horizontal scroll*/
 }
 
 /* General Container for Centering */
 .container-inner {
-    max-width: 1200px; /* Standard max width */
-    margin: 0 auto;
-    padding: 0 20px; /* Padding for smaller screens */
+  max-width: 1200px; /* Standard max width */
+  margin: 0 auto;
+  padding: 0 20px; /* Padding for smaller screens */
 }

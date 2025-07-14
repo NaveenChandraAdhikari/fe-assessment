@@ -15,24 +15,20 @@
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/footer.css">
     <link rel="stylesheet" href="assets/css/media.css">
-    <!-- <script src="js/script.js" defer></script> -->
+    <link rel="stylesheet" href="assets/css/loader.css">
      <script src="assets/js/script.js" defer></script>
 </head>
 <body>
+<div id="loading">
+    <div class="spinner"></div>
+  </div>
+
     <header class="header">
         <div class="header-container">
             <div class="header-left">
                 <a href="#" class="logo">
-                    <svg class="abstract-logo-header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 51 51" preserveAspectRatio="xMinYMid slice">
-                        <g fill="#fff">
-                            <path d="M25.41 0C5.08 0 0 5.08 0 25.41s5.08 25.41 25.41 25.41 25.41-5.08 25.41-25.41S45.74 0 25.41 0zm-4.17 39.31A9.73 9.73 0 1 1 31 29.58a9.75 9.75 0 0 1-9.76 9.73zm17.67-.4h-4.77V16.67H11.91v-4.76h27z"></path>
-                            <circle cx="21.24" cy="29.58" r="4.96"></circle>
-                        </g>
-                    </svg>
-                    Abstract
+                    📖 Dictionary
                 </a>
-                <span class="logo-divider">|</span>
-                <a class="help-center" href="#">Help Center</a>
             </div>
             <div class="header-actions">          
                 <div class="search-desktop">
@@ -51,7 +47,8 @@
             </div>
         </div>
     </header>
-     <main>
+    <div class="main-content">
+     <main class="main-content">
         <section class="hero">
             <h1>How can we help?</h1>
             <div class="hero-search-container">
@@ -65,65 +62,28 @@
             </div>
         </section>
     </main>
-
-    <footer class="footer">
-        <div class="container-inner">
-            <div class="footer-columns-wrapper">
-                <nav class="footer-column">
-                    <h3 class="footer-title">Abstract</h3>
-                    <ul>
-                        <li><a href="#">Start Trial</a></li>
-                        <li><a href="#">Pricing</a></li>
-                        <li><a href="#">Download</a></li>
-                    </ul>
-                </nav>
-
-                <nav class="footer-column">
-                    <h3 class="footer-title">Resources</h3>
-                    <ul>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Help Center</a></li>
-                        <li><a href="#">Release Notes</a></li>
-                        <li><a href="#">Status</a></li>
-                    </ul>
-                </nav>
-
-                <nav class="footer-column">
-                    <h3 class="footer-title">Community</h3>
-                    <ul>
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">LinkedIn</a></li>
-                        <li><a href="#">Facebook</a></li>
-                        <li><a href="#">Dribbble</a></li>
-                        <li><a href="#">Podcast</a></li>
-                    </ul>
-                </nav>
-
-                <nav class="footer-column">
-                    <h3 class="footer-title">Company</h3>
-                    <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Legal</a></li>
-                        <li><strong>Contact Us</strong></li>
-                        <li><a href="mailto:info@goabstract.com">info@goabstract.com</a></li>
-                    </ul>
-                </nav>
+    </div>
+<footer class="footer">
+    <div class="container-inner">
+        
+        <div class="footer-content">
+            <div class="footer-branding">
+                <a href="index.html" class="footer-logo">📖 Dictionary</a>
+                <p class="footer-description">Made with ❤️ by Naveen Chandra Adhikari.</p>
             </div>
-
-            <div class="footer-copyright">
-                <svg class="abstract-logo-footer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 51 51" preserveAspectRatio="xMinYMid slice">
-                    <g fill="#fff">
-                        <path d="M25.41 0C5.08 0 0 5.08 0 25.41s5.08 25.41 25.41 25.41 25.41-5.08 25.41-25.41S45.74 0 25.41 0zm-4.17 39.31A9.73 9.73 0 1 1 31 29.58a9.75 9.75 0 0 1-9.76 9.73zm17.67-.4h-4.77V16.67H11.91v-4.76h27z"></path>
-                        <circle cx="21.24" cy="29.58" r="4.96"></circle>
-                    </g>
-                </svg>
-                <p>&copy; Copyright 2025</p>
-                <p>Abstract Studio Design, Inc.</p>
-                <p>All rights reserved</p>
-            </div>
+            <nav class="footer-links">
+                <a href="https://github.com" target="_blank">GitHub</a>
+                <a href="https://dictionaryapi.dev/" target="_blank">API Source</a>
+                <a href="#">Contact</a>
+            </nav>
         </div>
-    </footer>
+
+        <div class="footer-copyright">
+            <p>&copy; 2025 Dictionary. All rights reserved.</p>
+        </div>
+
+    </div>
+</footer>
 
 </body>
 </html>

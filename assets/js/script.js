@@ -1,3 +1,4 @@
+const loader =document.getElementById('loading');
 const dictionaryContainer = document.querySelector('.dictionary-container');
 
 async function fetchWords() {
@@ -37,18 +38,26 @@ function createWordCard(word) {
 }
 
 async function displayWords() {
-    const words = await fetchWords();
-    // console.log(words);
-    if (words.length === 0) {
+
+    //spinner
+    loader.style.display='flex';
+    dictionaryContainer.innerHTML=''; //clearing the old content
+ try {
+        const words = await fetchWords();
+        if (words.length === 0) throw new Error("No words fetched.");
+
+        const randomWords = getRandomWords(words, 6);
+        randomWords.forEach(word => {
+            const card = createWordCard(word);
+            dictionaryContainer.appendChild(card);
+        });
+    } catch (error) {
         dictionaryContainer.innerHTML = '<p>Error loading words.</p>';
-        return;
+        console.error(error);
+    } finally {
+        // hide the spinnner
+        loader.style.display = 'none';
     }
-    const randomWords = getRandomWords(words, 6);
-    dictionaryContainer.innerHTML = '';
-    randomWords.forEach(word => {
-        const card = createWordCard(word);
-        dictionaryContainer.appendChild(card);
-    });
 }
 
 displayWords();

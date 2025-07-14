@@ -1,4 +1,10 @@
 
+.details-hero {
+    background-color: #dadbf1;
+    color: #000;
+    text-align: center;
+    padding: 30px 0;
+}
 .hero {
     background: var(--color-bg-light); 
     padding: 80px 20px 100px;

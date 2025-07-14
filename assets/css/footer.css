@@ -4,6 +4,10 @@
     color: var(--color-bg-white);
     padding: 80px 0; /* More vertical padding */
 }
+.simple-footer{
+    padding: 25px 0;
+    font-size: 0.85rem;
+}
 
 
 .footer-columns-wrapper {

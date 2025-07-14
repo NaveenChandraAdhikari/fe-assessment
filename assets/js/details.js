@@ -2,6 +2,7 @@ const wordTitle = document.getElementById('word-title');
 const wordPhonetic = document.getElementById('word-phonetic');
 const definitionsList=document.getElementById('definitions-list');
 const errorMessage = document.getElementById('error-message');
+const loader=document.getElementById('loading');
 
 function getWordFromUrl() {
     const params = new URLSearchParams(window.location.search);
@@ -26,57 +27,62 @@ function findNounDetails(meanings){
 }
 
 
+
 async function displayWordDetails() {
-    let word = getWordFromUrl() || localStorage.getItem('selectedWord');
-    if (!word) {
-        errorMessage.textContent = 'No word selected.';
-        errorMessage.style.display = 'block';
-        return;
-    }
-    localStorage.setItem('selectedWord', word);
+//beginning loader
+    loader.style.display = 'flex';
+    errorMessage.style.display = 'none'; 
 
-    const wordData = await fetchWordDetails(word);
-    if (!wordData) {
-        errorMessage.textContent = 'Failed to load word details.';
-        errorMessage.style.display = 'block';
-        return;
-    }
+    try {
+    
+        let word = getWordFromUrl() || localStorage.getItem('selectedWord');
 
-    wordTitle.textContent = word;
-    wordPhonetic.textContent = wordData.phonetic || 'N/A';
+        if (!word) {
+                throw new Error('No word selected,please go back and select a word.');
+        }
 
-    const nounDetails = findNounDetails(wordData.meanings);
+        localStorage.setItem('selectedWord', word);
+        const wordData = await fetchWordDetails(word);
 
-    definitionsList.innerHTML = '';
+        wordTitle.textContent = wordData.word;
+        wordPhonetic.textContent = wordData.phonetic || 'N/A';
 
-    if (nounDetails && nounDetails.definitions.length > 0) {
-        const partOfSpeechTitle = document.createElement('h3');
-        partOfSpeechTitle.textContent = nounDetails.partOfSpeech;
-        partOfSpeechTitle.style.textTransform = 'capitalize'; 
-        definitionsList.appendChild(partOfSpeechTitle);
+        const nounDetails = findNounDetails(wordData.meanings);
+        definitionsList.innerHTML = ''; //clear the list 
 
-        nounDetails.definitions.forEach(def => {
-            const definitionDiv = document.createElement('div');
-            definitionDiv.className = 'definition-entry';
+        if (nounDetails && nounDetails.definitions.length > 0) {
+            const partOfSpeechTitle = document.createElement('h3');
+            partOfSpeechTitle.textContent = nounDetails.partOfSpeech;
+            partOfSpeechTitle.style.textTransform = 'capitalize';
+            definitionsList.appendChild(partOfSpeechTitle);
 
-            const definitionP = document.createElement('p');
-            definitionP.innerHTML = `<strong>Definition:</strong> ${def.definition}`;
-            definitionDiv.appendChild(definitionP);
+            nounDetails.definitions.forEach(def => {
+                const definitionDiv = document.createElement('div');
+                definitionDiv.className = 'definition-entry';
 
-          
-            if (def.example) {
-                const exampleP = document.createElement('p');
-                exampleP.innerHTML = `<strong>Example:</strong> <em>${def.example}</em>`;
-                definitionDiv.appendChild(exampleP);
-            }
-            
-            definitionDiv.appendChild(document.createElement('hr'));
+                const definitionP = document.createElement('p');
+                definitionP.innerHTML = `<strong>Definition:</strong> ${def.definition}`;
+                definitionDiv.appendChild(definitionP);
 
-            definitionsList.appendChild(definitionDiv);
-        });
+                if (def.example) {
+                    const exampleP = document.createElement('p');
+                    exampleP.innerHTML = `<strong>Example:</strong> <em>${def.example}</em>`;
+                    definitionDiv.appendChild(exampleP);
+                }
 
-    } else {
-        definitionsList.textContent = 'No noun definitions found for this word.';
+                definitionDiv.appendChild(document.createElement('hr'));
+                definitionsList.appendChild(definitionDiv);
+            });
+        } else {
+            definitionsList.textContent = 'No noun definitions found for this word.';
+        }
+
+    } catch (error) {
+        console.error('Error displaying word details:', error);
+        errorMessage.textContent = error.message; 
+                errorMessage.style.display = 'block';
+    } finally {
+        loader.style.display = 'none';
     }
 }
 displayWordDetails();

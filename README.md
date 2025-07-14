@@ -1,17 +1,19 @@
 # 📖 Interactive Dictionary Web App
+A clean, responsive, and feature-rich dictionary built with HTML,CSS,JS.This project fetches and displays word definitions, phonetics, and examples from a third-party public API endpoint and provides a seamless user experience for exploring various words
 
-A clean, responsive, and feature-rich dictionary built with HTML,CSS,JS.This project fetches and displays word definitions, phonetics, and examples from public APIs, providing a seamless user experience with a sleek dark theme and dynamic animations.
-<img width="1848" height="975" alt="Screenshot from 2025-07-14 18-54-37" src="https://github.com/user-attachments/assets/c149d745-31dd-4b45-982b-44d6b4f6f60b" />
+<img width="2996" height="1632" alt="Screenshot 2025-07-14 at 21 27 56" src="https://github.com/user-attachments/assets/127a5c8f-e476-45d0-a233-d5772b0ac86a" />
 
-<img width="1848" height="975" alt="Screenshot from 2025-07-14 18-55-01" src="https://github.com/user-attachments/assets/d8bcf0d1-51bb-4209-857e-06bc31e76393" />
+<img width="2996" height="1632" alt="Screenshot 2025-07-14 at 21 28 07" src="https://github.com/user-attachments/assets/a7d72d9c-e65b-46f8-853b-5be8c3e14241" />
 
-### ## Live Demo
-
-Check out the live version of the app here: **https://naveenchandraadhikari.github.io/fe-assessment/**
 ---
 
-### ## Features
 
+
+### Live Demo
+Check out the live version of the app here: **https://naveenchandraadhikari.github.io/fe-assessment/**
+
+
+### Features
 * **Dynamic Homepage:** Displays a random selection of 6 words on every visit.
 * **Detailed View:** Click on any word to navigate to a detailed view with comprehensive information.
 * **Multiple Definitions:** Displays all noun definitions available from the API, not just the first one.
@@ -23,8 +25,8 @@ Check out the live version of the app here: **https://naveenchandraadhikari.gith
 
 ---
 
-### ## Technologies Used
 
+### Technologies Used
 This project was built using the following technologies:
 
 * **HTML5:** For the structure and content of the application.
@@ -43,8 +45,7 @@ This project was built using the following technologies:
 
 ---
 
-### ## Getting Started
-
+### Getting Started
 To run this project locally on your machine, follow these simple steps:
 
 1.  **Clone the repository:**
@@ -56,12 +57,10 @@ To run this project locally on your machine, follow these simple steps:
     cd fe-assessment
     ```
 3.  **Open the `index.html` file in your browser.**
-
-
+   
 ---
 
-### ## What I Learned
-
+### What I Learned
 This project was a great opportunity to practice and solidify my understanding of core web development concepts, including:
 
 * Making asynchronous API calls and handling the responses, including loading and error states.

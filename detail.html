@@ -1,73 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Word Details</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="assets/css/categories.css" />
-    <link rel="stylesheet" href="assets/css/headers.css" />
-    <link rel="stylesheet" href="assets/css/hero.css" />
-    <link rel="stylesheet" href="assets/css/reset.css" />
-    <link rel="stylesheet" href="assets/css/footer.css" />
-    <link rel="stylesheet" href="assets/css/media.css" />
-    <link rel="stylesheet" href="assets/css/loader.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/categories.css">
+    <link rel="stylesheet" href="assets/css/headers.css">
+    <link rel="stylesheet" href="assets/css/hero.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/media.css">
+    <link rel="stylesheet" href="assets/css/loader.css">
     <script src="assets/js/details.js" defer></script>
-  </head>
-  <body>
+</head>
+<body>
+     
     <div id="loading">
-      <div class="spinner"></div>
-    </div>
+    <div class="spinner"></div>
+  </div>
 
     <header class="header">
-      <div class="header-container">
+    <div class="header-container">
         <div class="header-left">
-          <a href="index.html" class="logo"> 📖 Dictionary </a>
+            <a href="index.html" class="logo">
+                📖 Dictionary
+            </a>
         </div>
-      </div>
-    </header>
-    <div class="main-content">
-      <main>
-        <section class="hero">
-          <h1>Word Details</h1>
+        </div>
+</header>
+<div class="main-content">
+    <main>
+        <section class="details-hero">
+            <h1>Word Details</h1>
         </section>
         <section class="word-detail">
-          <div class="word-detail-container">
-            <div class="word-content">
-              <h2 id="word-title"></h2>
-              <p id="word-phonetic"></p>
-              <div id="definitions-list"></div>
-              <p id="error-message" style="color: red; display: none"></p>
+
+
+            <div class="word-detail-container">
+                <div class="word-content">
+                    <h2 id="word-title"></h2>
+                    <p id="word-phonetic"></p>
+                     <div id="definitions-list"></div>
+                    <p id="error-message" style="color: red; display: none;"></p>
+                </div>
             </div>
-          </div>
         </section>
-      </main>
-    </div>
-    <footer class="footer">
-      <div class="container-inner">
+    </main>
+</div>
+  <footer class="footer">
+    <div class="container-inner">
+        
         <div class="footer-content">
-          <div class="footer-branding">
-            <a href="index.html" class="footer-logo">📖 Dictionary</a>
-            <p class="footer-description">
-              Made with ❤️ by Naveen Chandra Adhikari.
-            </p>
-          </div>
-          <nav class="footer-links">
-            <a href="https://github.com" target="_blank">GitHub</a>
-            <a href="https://dictionaryapi.dev/" target="_blank">API Source</a>
-            <a href="#">Contact</a>
-          </nav>
+            <div class="footer-branding">
+                <a href="index.html" class="footer-logo">📖 Dictionary</a>
+                <p class="footer-description">Made with ❤️ by Naveen Chandra Adhikari.</p>
+            </div>
+            <nav class="footer-links">
+                <a href="https://github.com" target="_blank">GitHub</a>
+                <a href="https://dictionaryapi.dev/" target="_blank">API Source</a>
+                <a href="#">Contact</a>
+            </nav>
         </div>
 
         <div class="footer-copyright">
-          <p>&copy; 2025 Dictionary. All rights reserved.</p>
+            <p>&copy; 2025 Dictionary. All rights reserved.</p>
         </div>
-      </div>
-    </footer>
-  </body>
+    </div>
+</footer>
+</body>
 </html>

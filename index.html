@@ -1,75 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dictionary | Explore words</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="assets/css/categories.css" />
-    <link rel="stylesheet" href="assets/css/headers.css" />
-    <link rel="stylesheet" href="assets/css/hero.css" />
-    <link rel="stylesheet" href="assets/css/reset.css" />
-    <link rel="stylesheet" href="assets/css/footer.css" />
-    <link rel="stylesheet" href="assets/css/media.css" />
-    <link rel="stylesheet" href="assets/css/loader.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abstract Help Center</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/categories.css">
+    <link rel="stylesheet" href="assets/css/headers.css">
+    <link rel="stylesheet" href="assets/css/hero.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/media.css">
+    <link rel="stylesheet" href="assets/css/loader.css">
     <script src="assets/js/script.js" defer></script>
-  </head>
-  <body>
+    <style>
+        .logout-btn {
+            background: #fff;
+            color: var(--accent, #4f46e5);
+            border: 1px solid var(--accent);
+            border-radius: 8px;
+            padding: 0.5rem 1.25rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+        .logout-btn:hover {
+            background: var(--accent);
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
     <div id="loading">
-      <div class="spinner"></div>
+        <div class="spinner"></div>
     </div>
-
     <header class="header">
-      <div class="header-container">
-        <div class="header-left">
-          <a href="#" class="logo"> 📖 Dictionary </a>
+        <div class="header-container">
+            <div class="header-left">
+                <a href="#" class="logo">
+                    📖 Dictionary
+                </a>
+            </div>
+            <div class="header-actions">          
+                <!-- <div class="search-desktop">
+                    <input type="text" class="search-input" placeholder="Search">
+                </div> -->
+                <button id="logoutBtn" class="logout-btn">Logout</button>  <!-- Added logout button -->
+                <!-- <button class="submit-request-btn">Submit a request</button> -->
+                <!-- <button class="sign-in-btn">Sign in</button> -->
+                <button class="search-icon" aria-label="Search">
+                    <img src="assets/img/icons8-search.svg" alt="searchimg" class="search-image">
+                </button>  
+                <button class="menu-toggle-btn" aria-label="Toggle menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
         </div>
-        <div class="header-actions">
-          <button class="menu-toggle-btn" aria-label="Toggle menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </button>
-        </div>
-      </div>
     </header>
     <div class="main-content">
-      <main class="main-content">
-        <section class="hero">
-          <h1>Explore words</h1>
-        </section>
-        <section class="dictionary">
-          <div class="dictionary-container">
-            <!-- Words will be dynamically inserted as i have made use of DOM -->
-          </div>
-        </section>
-      </main>
+        <main class="main-content">
+            <section class="hero">
+                <h1>How can we help?</h1>
+                <div class="hero-search-container">
+                    <input type="text" class="hero-search-input" placeholder="Search..." aria-label="Search dictionary">
+                    <button class="hero-search-btn" aria-label="Search">→</button>
+                </div>
+            </section>
+   <!-- 🔹 Filter Section -->
+<div class="toolbar">
+  <div class="sort-group">
+    <select id="sortBy" class="sort-dropdown">
+      <option value="">Sort By</option>
+      <option value="word:asc">Word (A → Z)</option>
+      <option value="word:desc">Word (Z → A)</option>
+      <!-- Other options -->
+    </select>
+    <button id="applyFilters" class="apply-btn">Apply</button>
+  </div>
+  <button id="openAddWordModal" class="add-word-btn">+ Add Word</button>
+</div>
+
+
+<div id="addWordModal" class="modal hidden">
+  <div class="modal-content">
+    <span id="closeModal" class="close">&times;</span>
+    <h2>Add a New Word</h2>
+  <form id="addWordForm">
+  <label>Word: <input id="newWord" type="text" required></label><br>
+  <label>Phonetic: <input id="newPhonetic" type="text"></label><br>
+  <label>Origin: <input id="newOrigin" type="text"></label><br>
+  <label>Meanings (comma-separated): <textarea id="newMeanings" rows="3"></textarea></label><br>
+  <button type="submit">Add Word</button>
+</form>
+  </div>
+</div>
+          <section class="dictionary">
+  <div class="dictionary-container"></div>
+  <div class="pagination" id="pagination">
+    <button id="prev" aria-label="Previous page">Prev</button>
+    <div id="page-numbers" class="page-numbers"></div>
+    <button id="next" aria-label="Next page">Next</button>
+  </div>
+</section>
+
+
+        </main>
     </div>
     <footer class="footer">
-      <div class="container-inner">
-        <div class="footer-content">
-          <div class="footer-branding">
-            <a href="index.html" class="footer-logo">📖 Dictionary</a>
-            <p class="footer-description">
-              Made with ❤️ by Naveen Chandra Adhikari.
-            </p>
-          </div>
-          <nav class="footer-links">
-            <a href="https://github.com" target="_blank">GitHub</a>
-            <a href="https://dictionaryapi.dev/" target="_blank">API Source</a>
-            <a href="#">Contact</a>
-          </nav>
+        <div class="container-inner">
+            <div class="footer-content">
+                <div class="footer-branding">
+                    <a href="index.html" class="footer-logo">📖 Dictionary</a>
+                    <p class="footer-description">Made with ❤️ by Naveen Chandra Adhikari.</p>
+                </div>
+                <nav class="footer-links">
+                    <a href="https://github.com" target="_blank">GitHub</a>
+                    <a href="https://dictionaryapi.dev/" target="_blank">API Source</a>
+                    <a href="#">Contact</a>
+                </nav>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2025 Dictionary. All rights reserved.</p>
+            </div>
         </div>
-
-        <div class="footer-copyright">
-          <p>&copy; 2025 Dictionary. All rights reserved.</p>
-        </div>
-      </div>
     </footer>
-  </body>
+</body>
 </html>

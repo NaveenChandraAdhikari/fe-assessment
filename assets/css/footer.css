@@ -1,53 +1,55 @@
+
+
 .footer {
-  background-color: #1c1c1c;
-  color: #ccc;
-  padding: 3.125rem 0 1.875rem 0;
+    background-color: #1c1c1c; 
+    color: #ccc;
+    padding: 3.125rem 0 1.875rem 0;
 }
 
 .footer-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 2rem;
-  flex-wrap: wrap;
-  gap: 1.5rem;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding-bottom: 2rem;
+    flex-wrap: wrap; 
+    gap: 1.5rem; 
 }
 
 .footer-branding .footer-logo {
-  display: block;
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #fff;
-  text-decoration: none;
-  margin-bottom: 0.5rem;
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
 }
 
 .footer-description {
-  color: #aaa;
-  font-size: 0.9rem;
+    color: #aaa;
+    font-size: 0.9rem;
 }
 
 .footer-links {
-  display: flex;
-  gap: 1.5rem;
+    display: flex;
+    gap: 1.5rem; 
 }
 
 .footer-links a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 0.9rem;
-  transition: color 0.2s ease;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
 }
 
 .footer-links a:hover {
-  color: #dadbf1;
+    color: #dadbf1; 
 }
 
 .footer-copyright {
-  border-top: 0.0625rem solid #444;
-  padding-top: 1.5rem;
-  margin-top: 1rem;
-  text-align: center;
-  font-size: 0.85rem;
-  color: #aaa;
+    border-top: 0.0625rem solid #444; 
+    padding-top: 1.5rem;
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #aaa;
 }

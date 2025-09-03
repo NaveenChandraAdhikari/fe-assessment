@@ -51,7 +51,7 @@ applyFiltersBtn.addEventListener('click', () => {
 
 async function isAuthenticated() {
   try {
-    const res = await fetch('http://localhost:3000/words?page=1&limit=1', { credentials: 'include' });
+    const res = await fetch(`${API_BASE_URL}/words?page=1&limit=1`, { credentials: 'include' });
     return res.ok;
   } catch {
     return false;
@@ -64,7 +64,7 @@ async function fetchPage() {
     window.location.href = '/login.html';
     return [];
   }
-  const url = `http://localhost:3000/words?${buildQuery()}`;
+  const url = `${API_BASE_URL}/words?${buildQuery()}`;
   const res = await fetch(url, { credentials: 'include' });
   if (!res.ok) throw new Error('Failed to fetch words: ' + res.status);
 
@@ -189,7 +189,7 @@ heroSearchInput.addEventListener('keydown', (e) => {
 });
 
 document.getElementById('logoutBtn').addEventListener('click', async () => {
-  const res = await fetch('http://localhost:3000/logout', {
+  const res = await fetch(`${API_BASE_URL}/logout`, {
     method: 'POST',
     credentials: 'include'
   });
@@ -224,7 +224,7 @@ document.getElementById('addWordForm').addEventListener('submit', async (e) => {
   }
 
   try {
-    const res = await fetch('http://localhost:3000/words/', {
+    const res = await fetch(`${API_BASE_URL}/words/`, {
       method: 'POST',
       credentials: 'include',
       headers: { 'Content-Type': 'application/json' },
@@ -251,7 +251,7 @@ document.querySelectorAll('.delete-btn').forEach(btn => {
     e.stopPropagation(); // prevent navigation
     const id = btn.getAttribute('data-id');
     if (!confirm('Delete this word?')) return;
-    const res = await fetch(`http://localhost:3000/words/${id}`, {
+    const res = await fetch(`${API_BASE_URL}/words/${id}`, {
       method: 'DELETE',
       credentials: 'include',
     });
@@ -281,7 +281,7 @@ function createWordCard(word) {
     e.stopPropagation();
     if (!confirm('Delete this word?')) return;
 
-    const res = await fetch(`http://localhost:3000/words/${word.id}`, {
+    const res = await fetch(`${API_BASE_URL}/words/${word.id}`, {
       method: 'DELETE',
       credentials: 'include',
     });

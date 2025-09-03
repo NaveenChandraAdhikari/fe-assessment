@@ -18,7 +18,7 @@ const filterOrigin = document.getElementById('filterOrigin');
 // Filters + sorting
 const sortBySelect = document.getElementById('sortBy');
 const applyFiltersBtn = document.getElementById('applyFilters');
-
+//  const API_BASE_URL = 'http://127.0.0.1:3000'; 
 const state = {
   page: 1,
   limit: pageSizeSelect ? Number(pageSizeSelect.value) : 6,
@@ -47,16 +47,21 @@ applyFiltersBtn.addEventListener('click', () => {
   updateList();
 });
 
-
-
 async function isAuthenticated() {
   try {
     const res = await fetch(`${API_BASE_URL}/words?page=1&limit=1`, { credentials: 'include' });
+    console.log('Auth check status:', res.status);  // Log status (e.g., 401, 403)
+    if (!res.ok) {
+      const errorText = await res.text();
+      console.error('Auth failed:', errorText);  // Log backend error message
+    }
     return res.ok;
-  } catch {
+  } catch (err) {
+    console.error('Auth fetch error:', err);  // Catches network/CORS issues
     return false;
   }
 }
+
 
 
 async function fetchPage() {

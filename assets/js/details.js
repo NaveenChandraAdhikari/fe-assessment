@@ -11,7 +11,7 @@ function getWordFromUrl() {
 
 async function fetchWordDetails(word) {
   try {
-    const response = await fetch(`http://localhost:3000/word/${encodeURIComponent(word)}`, { credentials: 'include' });
+    const response = await fetch(`${API_BASE_URL}/word/${encodeURIComponent(word)}`, { credentials: 'include' });
     if (!response.ok) throw new Error('Word not found');
     const data = await response.json();
     return data;``
